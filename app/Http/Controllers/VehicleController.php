@@ -245,7 +245,7 @@ class VehicleController extends Controller
         // Verifica se o arquivo antigo existe na pasta app/images
         $image = $vehicle->image;
         if (Storage::disk('images')->exists($image)) {
-            // Caso exista, remove o mesmo para manter somente um arquivo por veículo
+            // Caso exista, remove o arquivo, pois já não será mais utilizado
             Storage::disk('images')->delete($image);
         }
 

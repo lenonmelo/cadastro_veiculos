@@ -36,20 +36,22 @@
                     <th>Ano</th>
                     <th>Quilometragem</th>
                     <th>Preço</th>
+                    <th></th>
                     <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($vehicles as $vehicle)
                     <tr>
-                        <td>{{$vehicle->id}}</td>
-                        <td>{{$vehicle->name}}</td>
-                        <td>{{$vehicle->carBrand->name}}</td>
-                        <td>{{$vehicle->carModel->name}}</td>
-                        <td>{{$vehicle->year}}</td>
-                        <td>{{ number_format($vehicle->mileage, 0, '', '.') }}</td>
-                        <td>{{ number_format($vehicle->price, 2, ',', '.') }}</td>
-                        <td>
+                        <td class="align-middle">{{$vehicle->id}}</td>
+                        <td class="align-middle">{{$vehicle->name}}</td>
+                        <td class="align-middle">{{$vehicle->carBrand->name}}</td>
+                        <td class="align-middle">{{$vehicle->carModel->name}}</td>
+                        <td class="align-middle">{{$vehicle->year}}</td>
+                        <td class="align-middle">{{ number_format($vehicle->mileage, 0, '', '.') }}</td>
+                        <td class="align-middle">{{ number_format($vehicle->price, 2, ',', '.') }}</td>
+                        <td class="align-middle"><img src="/images/{{ $vehicle->image }}" alt="Imagem do Veículo" class="img-fluid" width="100"></td>
+                        <td class="align-middle">
                             <a href="{{ route('vehicles.edit', ['vehicle' => $vehicle->id]) }}" title="Alterar"><i class="fa fa-pencil-alt" aria-hidden="true"></i></a>
                             <form class="d-inline" method="POST" action="{{ route('vehicles.destroy', ['vehicle' => $vehicle->id]) }}" onsubmit="return confirm('Tem certeza que deseja excluir esse veículo?')">
                                 @method('DELETE')
