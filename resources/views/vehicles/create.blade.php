@@ -65,7 +65,7 @@
         </div>
 
         <div class="form-group row">
-            {!! Form::label('price', 'Imagem:*', ['id'=> 'price', 'class' => 'col-sm-2 col-form-label']) !!}
+            {!! Form::label('image', 'Imagem:*', ['class' => 'col-sm-2 col-form-label']) !!}
             <div class="col-sm-10">
                 {!! Form::file('image') !!}
             </div>
@@ -91,7 +91,7 @@
         // Aplica a máscara para valores monetários
         $('#price').mask('000.000.000,00', { reverse: true });
 
-        //Aplica a mascar no campo quilometragem
+        //Aplica a máscara no campo quilometragem
         $('#mileage').mask('000.000.000', { reverse: true });
 
         $('#car_brand_id').on('change', function () {

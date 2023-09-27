@@ -32,14 +32,14 @@
         <div class="form-group row">
             {!! Form::label('car_brand_id', 'Marcas:*', ['class' => 'col-sm-2 col-form-label']) !!}
             <div class="col-sm-3">
-                {!! Form::select('car_brand_id', ['' => 'Selecione uma marca'] + $carBrands->pluck('name', 'id')->toArray(), $vehicle->carBrand->id, ['class' => 'form-control' . ($errors->has('car_brand_id') ? ' is-invalid' : '')]) !!}
+                {!! Form::select('car_brand_id', ['' => 'Selecione uma marca'] + $carBrands->pluck('name', 'id')->toArray(), $vehicle->carBrand->id, ['class' => 'form-control' . ($errors->has('car_brand_id') ? ' is-invalid' : ''), 'id' => 'car_brand_id']) !!}
             </div>
         </div>
 
         <div class="form-group row">
             {!! Form::label('car_model_id', 'Modelo:*', ['class' => 'col-sm-2 col-form-label']) !!}
             <div class="col-sm-3">
-                {!! Form::select('car_model_id', ['' => 'Selecione um modelo'] + $carModels->pluck('name', 'id')->toArray(), $vehicle->carModel->id, ['class' => 'form-control' . ($errors->has('car_model_id') ? ' is-invalid' : '')]) !!}
+                {!! Form::select('car_model_id', ['' => 'Selecione um modelo'] + $carModels->pluck('name', 'id')->toArray(), $vehicle->carModel->id, ['class' => 'form-control' . ($errors->has('car_model_id') ? ' is-invalid' : ''), 'id' => 'car_model_id']) !!}
             </div>
         </div>
 
@@ -60,12 +60,12 @@
         <div class="form-group row">
             {!! Form::label('price', 'Preço:*', ['class' => 'col-sm-2 col-form-label']) !!}
             <div class="col-sm-2">
-                {!! Form::text('price', number_format($vehicle->price, 2, ',', '.'), ['class' => 'form-control' . ($errors->has('price') ? ' is-invalid' : '')]) !!}
+                {!! Form::text('price', number_format($vehicle->price, 2, ',', '.'), ['class' => 'form-control' . ($errors->has('price') ? ' is-invalid' : ''), 'id' => 'price']) !!}
             </div>
         </div>
 
         <div class="form-group row">
-            {!! Form::label('price', 'Imagem', ['class' => 'col-sm-2 col-form-label']) !!}
+            {!! Form::label('image', 'Imagem', ['class' => 'col-sm-2 col-form-label']) !!}
             <div class="col-sm-10">
                 {!! Form::file('image') !!}
             </div>
@@ -90,19 +90,20 @@
         // Aplica a máscara para valores monetários
         $('#price').mask('000.000.000,00', { reverse: true });
 
-        //Aplica a mascara no campo quilometragem
+        // Aplica a máscara no campo quilometragem
         $('#mileage').mask('000.000.000', { reverse: true });
 
         $('#car_brand_id').on('change', function () {
             filterCarModels();
         });
 
+        // Obtém o modelo selecionado durante a edição
         var carModelId = {{ $vehicle->carModel->id }};
 
         filterCarModels(carModelId);
     });
 
-    function filterCarModels(carModelId = 0){
+    function filterCarModels(carModelId = 0) {
         let carBrandId = $("#car_brand_id").val();
         if (carBrandId) {
             // Faça uma requisição AJAX para obter os modelos com base na marca selecionada
@@ -117,7 +118,7 @@
                     $('#car_model_id').append('<option value="">Selecione um modelo</option>');
                     // Adicione as opções dos modelos com base nos dados recebidos
                     $.each(data, function (key, value) {
-                        $('#car_model_id').append('<option value="' + key + '" '+ (key == carModelId ? 'selected' : '') +'>' + value + '</option>');
+                        $('#car_model_id').append('<option value="' + key + '" ' + (key == carModelId ? 'selected' : '') + '>' + value + '</option>');
                     });
                 }
             });

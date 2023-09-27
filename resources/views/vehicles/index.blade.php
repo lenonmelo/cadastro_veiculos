@@ -4,7 +4,7 @@
 
 @section('content_header')
     <h1>Veículos 
-    <a href="{{ route('vehicles.create') }}" class="btn btn-sm btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Novo veículo</a>
+        <a href="{{ route('vehicles.create') }}" class="btn btn-sm btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Novo veículo</a>
     </h1>
 @endsection
 
@@ -28,16 +28,16 @@
     <div class="card-body">
         <table class="table table-hover">
             <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Marca</th>
-                <th>Modelo</th>
-                <th>Ano</th>
-                <th>Quilometragem</th>
-                <th>Preço</th>
-                <th>Ações</th>
-            </tr>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Ano</th>
+                    <th>Quilometragem</th>
+                    <th>Preço</th>
+                    <th>Ações</th>
+                </tr>
             </thead>
             <tbody>
                 @foreach($vehicles as $vehicle)

@@ -3,15 +3,16 @@
 @section('title', 'Alterar Marca')
 
 @section('content_header')
-    <h1> Alterar Marca <h1/>
+    <h1>Alterar Marca</h1>
 @endsection
+
 @section('content')
-    @if($errors->any())
+    @if ($errors->any())
         <div class="alert alert-danger">
-            <h5><i class="icon fas fa-ban"></i>Erros: </h5>
+            <h5><i class="icon fas fa-ban"></i>Erros:</h5>
             <ul>
-                @foreach($errors->all() as $error)
-                    <li>{{$error}}</li>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
                 @endforeach
             </ul>
         </div>
@@ -38,4 +39,4 @@
             {!! Form::close() !!}
         </div>
     </div>
-@endsection 
+@endsection

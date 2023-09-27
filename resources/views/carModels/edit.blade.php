@@ -3,15 +3,16 @@
 @section('title', 'Alterar Modelo')
 
 @section('content_header')
-    <h1> Alterar Modelo <h1/>
+    <h1>Alterar Modelo</h1>
 @endsection
+
 @section('content')
-    @if($errors->any())
+    @if ($errors->any())
         <div class="alert alert-danger">
-            <h5><i class="icon fas fa-ban"></i>Erros: </h5>
+            <h5><i class="icon fas fa-ban"></i>Erros:</h5>
             <ul>
-                @foreach($errors->all() as $error)
-                    <li>{{$error}}</li>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
                 @endforeach
             </ul>
         </div>
@@ -27,7 +28,7 @@
                         {!! Form::text('name', null, ['class' => 'form-control' . ($errors->has('name') ? ' is-invalid' : '')]) !!}
                     </div>
                 </div>
-                
+
                 <div class="form-group row">
                     {!! Form::label('car_brand_id', 'Marcas:*', ['class' => 'col-sm-2 col-form-label']) !!}
                     <div class="col-sm-3">
@@ -45,4 +46,4 @@
             {!! Form::close() !!}
         </div>
     </div>
-@endsection 
+@endsection
