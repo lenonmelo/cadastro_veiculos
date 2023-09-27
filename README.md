@@ -28,7 +28,6 @@ Deverá seguir os seguintes passos:
 
     <code>php composer install/code>
 
-* Fazer uma copia do arquivo ".env.example" encontrado na estrutura principal do sistema e alterar o nome somente para ".env"
-* Incluir na configurações de banco de dados as informações do banco que irá rodar, conforme mostra abaixo.
+* Rodar o seguinte comenado para instalar os pacotes necessários
 
-     <code> DB_CONNECTION=mysql </code>
+    <code>php composer install/code>
