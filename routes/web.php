@@ -23,20 +23,17 @@ use Illuminate\Support\Facades\Storage;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-
+//Rotas de login e logout
 Route::get('login', [AuthUserController::class, 'index'])->name('login');
 Route::post('login', [AuthUserController::class, 'login'])->name('login');
-
 Route::post('logout', [AuthUserController::class, 'logout'])->name('logout');
 
-Route::get('register', [RegisterUserController::class, 'index'])->name('register');
-
 Route::resource('users', UserController::class);
-
 Route::resource('carBrands', CarBrandController::class);
 Route::resource('carModels', CarModelController::class);
 Route::resource('vehicles', VehicleController::class);
 
+//Rota para exibição de imagens
 Route::get('images/{filename}', function ($filename) {
     $path = storage_path("app/images/$filename");
 
@@ -50,4 +47,5 @@ Route::get('images/{filename}', function ($filename) {
     return response($file)->header('Content-Type', $type);
 })->where('filename', '(.*)');
 
+//Rota para filtrar os modelos conforme a marca escolhida, utilizada no cadastro de veículos
 Route::get('/carModelByCarBrand/{carBrandId}', [CarModelController::class, 'getModelsByBrand']);

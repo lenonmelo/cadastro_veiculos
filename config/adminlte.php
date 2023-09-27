@@ -313,7 +313,7 @@ return [
             'icon'        => 'fa fa-car'
         ],
         [
-            'text'        => 'Usuarios',
+            'text'        => 'Usuários',
             'url'         => 'users',
             'icon'        => 'far fa-fw fa-user',
         ]
