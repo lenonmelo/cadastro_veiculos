@@ -31,13 +31,20 @@ Deverá seguir os seguintes passos:
 * Fazer uma copia do arquivo ".env.example" encontrado na estrutura principal do sistema e alterar o nome somente para ".env"
 * Incluir na configurações de banco de dados as informações do banco que irá rodar, conforme mostra abaixo.
 
-<code> DB_CONNECTION=mysql
+<code> DB_CONNECTION=mysql </code>
+
+
+
+
+
+
+==========================
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=**xxxxxxxx**
 DB_USERNAME=**xxxx**
 DB_PASSWORD=**xxxx**
-</code> 
+ 
 
 
 
