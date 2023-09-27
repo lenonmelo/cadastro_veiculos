@@ -58,12 +58,7 @@ DB_PASSWORD=**xxxx**
 
   <code> http://127.0.0.1:8000/ </code>
 
-     <code> DB_CONNECTION=mysql </code>
-     
-     
-     
-     
-     
-     
-     
-     
+# Observação
+
+* Ao acessar o sistema pela primeira vez após a instalação, pode acontecer do sistema solicitar a griação da chave de acesso.
+* Nesse momento é só precionar no botão para a geração da chave que é mostrado na tela.
