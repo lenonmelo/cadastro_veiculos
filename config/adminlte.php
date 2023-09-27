@@ -256,8 +256,8 @@ return [
     'dashboard_url' => 'admin',
     'logout_url' => 'logout',
     'login_url' => 'login',
-    'register_url' => false,'//register',
-    'password_reset_url' => 'password/reset',
+    'register_url' => false,
+    'password_reset_url' => false,
     'password_email_url' => 'password/email',
     'profile_url' => false,
 

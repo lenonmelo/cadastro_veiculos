@@ -15,50 +15,51 @@ Para o desenvolvimento da aplicação foram utilizadas as seguintes tecnologias 
 * Banco Mysql versão 15.1
 
 # Rodar a aplicação
-Para rodar a aplicação o ambiente/máquina deverá ter instalado as seguintes aplicações:
-* PHP 8.0.x instalado e configurado nas variáveis de ambiente do sistema.
-<br><b>OBS:</b> Pode ser instalado através de aplicações com ambientes prontos como Xampp ou Wampp.
-* Composer: Para instalações dos pacotes necessários
-* Artisan: Para rodar o servidor de teste
+Para executar a aplicação, é necessário que o ambiente/máquina tenha as seguintes aplicações instaladas e configuradas:
+* PHP 8.0.x, instalado e configurado nas variáveis de ambiente do sistema;
+<br><b>OBS:</b> Você pode instalá-lo por meio de aplicações com ambientes prontos, como Xampp ou Wampp.
+* Composer: Será utilizado para a instalação dos pacotes necessários.
+* Artisan: Será utilizado para iniciar o servidor de teste.
 * MySQL 15.X ou Maria DB.
-Deverá seguir os seguintes passos:
-* Baixar o projeto na pasta que pretende rodar o sistema;
-* Acessar via terminal a pasta principal do sistema;
-* Rodar o seguinte comenado para instalar os pacotes necessários;
+  
+Após concluir as instalações necessárias, siga estas etapas:
+* Clonar o projeto na pasta que pretende executar o sistema;
+* Acesse a pasta principal do sistema através do terminal.
+* Execute o seguinte comando para instalar os pacotes necessários;
 
       php composer install
 
-* Fazer uma copia do arquivo ".env.example" encontrado na estrutura principal do sistema e alterar o nome somente para ".env";
-* Incluir na configurações de banco de dados as informações do banco que irá rodar, conforme mostra abaixo;
+* Faça uma cópia do arquivo ".env.example" encontrado na estrutura principal do sistema e altere o nome para ".env".
+* Nas configurações do banco de dados, inclua as informações referentes ao banco que será utilizado, conforme indicado abaixo:
 
       DB_CONNECTION=mysql <br>
       DB_HOST=127.0.0.1<br>
       DB_PORT=3306<br>
-      DB_DATABASE=<b>xxxxxxxx</b><br>
-      DB_USERNAME=<b>xxxx</b><br>
-      DB_PASSWORD=<b>xxxx</b><br>
+      DB_DATABASE=xxxxxxxx
+      DB_USERNAME=xxxx
+      DB_PASSWORD=xxxx
 
-* Acessar via terminal e executar o seguinte comando na pasta principal do projeto;
+* Acesse o terminal e execute o seguinte comando na pasta principal do projeto:
 
       php artisan migrate
 
-* Nesse momento o artisan irá perguntar se deseja criar a base no banco de dados, essa opção deve ser aceita;
-* Agora o banco de dados será criado e as migrations executadas automaticamente;
-* Também executar o seguinte comando para odar a seed, essa irá incluir os dados do usuário admin na base user;
+* Neste momento, o Artisan irá perguntar se deseja criar a base de dados; certifique-se de aceitar essa opção.
+* Agora, o banco de dados será criado automaticamente, e as migrações serão executadas automaticamente.
+* Além disso, execute o seguinte comando para executar a seed, que incluirá os dados do usuário admin na tabela de usuários.
 
       php artisan db:seed
 
-* Agora novamente via terminal, na pasta principal do sistema, exeutar o seguinte comando para rodar o servidor de teste;
+* Agora, mais uma vez, através do terminal, na pasta principal do sistema, execute o seguinte comando para iniciar o servidor de teste:
 
       php artisan serve 
 
-* Acessar no navegador o endereço local do servidor mostrado no terminal.
+* Acesse o endereço local do servidor no seu navegador, conforme exibido no terminal.
       
       http://127.0.0.1:8000
 
 # Acesso
 
-* O usuário e senha padrão de teste são as seghuintes:
+* O usuário e senha padrão de teste são as seguintes:
 
       Usuário: admin@teste.com.br
       Senha: admin
@@ -66,4 +67,4 @@ Deverá seguir os seguintes passos:
 
 # Observação
 
-* Ao rodar o sistema plea primeira vez no servidor, ele poderá solicitar a geração de uma chave de acesso, nesse momento é só apertar no botão que aparece na tela para a geração dessa chave, e entrar no endereço novamente.
+* Quando você rodar o sistema pela primeira vez no servidor, pode ser que ele solicite a geração de uma chave de acesso. Nesse momento, basta clicar no botão exibido na tela para gerar a chave e, em seguida, acesse novamente o endereço.
