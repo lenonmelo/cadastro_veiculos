@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Alterar veículo')
+@section('title', 'Alterar Veículo')
 
 @section('content_header')
-<h1>Alterar veículo</h1>
+<h1>Alterar Veículo</h1>
 @endsection
 
 @section('content')

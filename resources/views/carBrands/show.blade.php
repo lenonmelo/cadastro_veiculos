@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Visualizar marca')
+@section('title', 'Visualizar Marca')
 
 @section('content_header')
-    <h1>Visualizar marca</h1>
+    <h1>Visualizar Marca</h1>
 @endsection
 
 @section('content')
