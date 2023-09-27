@@ -55,3 +55,15 @@ Deverá seguir os seguintes passos:
 * Acessar no navegador o endereço local do servidor mostrado no terminal.
       
       http://127.0.0.1:8000
+
+# Acesso
+
+* O usuário e senha padrão de teste são as seghuintes:
+
+      Usuário: admin@teste.com.br
+      Senha: admin
+
+
+# Observação
+
+* Ao rodar o sistema plea primeira vez no servidor, ele poderá solicitar a geração de uma chave de acesso, nesse momento é só apertar no botão que aparece na tela para a geração dessa chave, e entrar no endereço novamente.
