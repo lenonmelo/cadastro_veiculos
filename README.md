@@ -27,3 +27,5 @@ Deverá seguir os seguintes passos:
 * Rodar o seguinte comenado para instalar os pacotes necessários
 
     <code>php composer install/code>
+  
+* Teste aqui
