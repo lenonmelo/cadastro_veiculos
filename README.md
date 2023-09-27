@@ -1,5 +1,4 @@
-# Aplicação de teste Autoconf
-Teste de nível técnico do Lenon Platenetti de Melo
+# Teste de nível técnico do Lenon Platenetti de Melo
 
 # Objetivo
 Aplicação de teste desenvolvida para a finalidade de medir o nível de conhecimento técnico do candidato Lenon Platenetti de Melo.
