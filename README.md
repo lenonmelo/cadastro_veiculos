@@ -16,15 +16,21 @@ Para o desenvolvimento da aplicação foram utilizadas as seguintes tecnologias 
 
 # Rodar a aplicação
 Para rodar a aplicação o ambiente/máquina deverá ter instalado as seguintes aplicações:
-* PHP 7.2.x instalado e configurado nas variáveis de ambiente do sistema.
+* PHP 8.0.x instalado e configurado nas variáveis de ambiente do sistema.
 <br><b>OBS:</b> Pode ser instalado através de aplicações com ambientes prontos como Xampp ou Wampp.
-* Composer: Para rodar o servidor Artisan.
+* Composer: Para instalações dos pacotes necessários
+* Artisan: Para rodar o servidor de teste
+* MySQL 15.X ou Maria DB.
 Deverá seguir os seguintes passos:
-* Sincronizar o repositório git do projeto em qualquer pasta;
-* Acessar via terminal a pasta \quadritech existente no projeto e rodar o servidor artisan dentro dessa pasta pelo comando:
+* Baixar o projeto na pasta que pretende rodar o sistema
+* Acessar via terminal a pasta principal do sistema
+* Rodar o seguinte comenado para instalar os pacotes necessários
 
-    <code>php artisan serve</code>
-    
+    <code>php composer install/code>
+
+* Após também executar o comando a seguir para iniciar o servidor.
+
+  
 * Acessar no navegador o endereço local do servidor mostrado no terminal.
 
   <code> http://127.0.0.1:8000/ </code>
