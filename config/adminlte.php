@@ -14,9 +14,9 @@ return [
     |
     */
 
-    'title' => 'Teste autoconf',
+    'title' => 'Gestor de veículos',
     'title_prefix' => '',
-    'title_postfix' => ' - Autoconf',
+    'title_postfix' => '',
 
     /*
     |--------------------------------------------------------------------------
@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Teste Lenon Melo</b>',
+    'logo' => '<b>Gestor de veículos</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,

@@ -3,7 +3,7 @@
 @section('title', 'Gestor de veículos')
 
 @section('content_header')
-    <h1>Seja bem-vindo ao teste técnico do Lenon Platenetti de Melo</h1>
+    <h1>Seja bem-vindo ao gestor de veículos</h1>
 @endsection
 
 @section('content')

@@ -1,7 +1,7 @@
-# Teste de nível técnico do Lenon Platenetti de Melo
+# Aplicação desenvolvida pelo Lenon Platenetti de Melo
 
 # Objetivo
-Aplicação de teste desenvolvida para a finalidade de medir o nível de conhecimento técnico do candidato Lenon Platenetti de Melo.
+O objetivo é realiar a gestão de veículos de uma maneira simples e eficiente.
 
 # Desenvolvimento
 Para o desenvolvimento da aplicação foram utilizadas as seguintes tecnologias web.
